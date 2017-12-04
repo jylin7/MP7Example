@@ -1,0 +1,21 @@
+fabric:
+	0-cotton
+	1-polyester
+	2-nylon
+	
+color:
+	0-black
+	1-white
+	2-green
+	
+length:
+	0-short
+	1-long
+	
+section:
+	0-lower
+	1-upper
+	
+atmosphere:
+	0-informal
+	1-formal
