@@ -1,45 +1,85 @@
 
 public class EnhancedImage {
+	/** The image url source. */
 	private String source;
-	private int color;
-	private int fabric;
-	private int length; // short or long
-	private int section; // upper or lower
-	private int atmosphere; // formal or informal
+	/** The specific key that stores information about the item, explained in the key file. */
+	private String key;
+	/** The color of the item. */
+	private String color;
+	/** The style of the item, for example: t-shirt, dress shirt, long pants, shorts, etc. */
+	private String style;
+	/** Whether the user likes the item or not. */
 	private boolean like = false;
 	
-	public EnhancedImage(final int c, final int f, final int l, final int s,
-			final int a, final String src) {
-		color = c;
-		fabric = f;
-		length = l;
-		section = s;
-		atmosphere = a;
+	/**
+	 * Creates an image with a key that specifies it from other items.
+	 * @param gender if the article of clothing is for men or women
+	 * @param atmosphere if the article is formal or informal
+	 * @param section if the article is for your upper half or lower half
+	 * @param style determines if the article is shorts, pants, t-shirts, long sleeved, etc.
+	 * @param color the color of the article of clothing
+	 * @param src the image url to display the image
+	 */
+	public EnhancedImage(final String gender, final String atmosphere, final String section,
+			final String style, final String color, final String src) {
+		key = gender + atmosphere + section;
+		this.style = style;
+		this.color = color;
 		source = src;
 	}
 	
-	public int getColor() {
+	/**
+	 * Returns the color of the item.
+	 * @return the color of the item
+	 */
+	public String getColor() {
 		return color;
 	}
-	public int getFabric() {
-		return fabric;
+	
+	/**
+	 * Returns the key of the item.
+	 * @return the key of the item
+	 */
+	public String getKey() {
+		return key;
 	}
-	public int getLength() {
-		return length;
+	
+	/**
+	 * Returns the style of the item.
+	 * @return the style of the item
+	 */
+	public String getStyle() {
+		return style;
 	}
-	public int getSection() {
-		return section;
-	}
-	public int getAtmosphere() {
-		return atmosphere;
-	}
+	
+	/**
+	 * Returns the image source of the item
+	 * @return the image source of the item
+	 */
 	public String getSource() {
 		return source;
 	}
+	
+	/**
+	 * Returns true if the item was liked, false if not.
+	 * @return true if the item was liked, false if not
+	 */
 	public boolean getLiked() {
 		return like;
 	}
+	
+	/**
+	 * Sets the like instance variable to true if the user likes the item.
+	 */
 	public void likeImage() {
 		like = true;
+	}
+	
+	/**
+	 * To string method to represent the image.
+	 */
+	public String toString() {
+		return "Source: " + source + "\nKey: " + key + "\nColor: " + color
+				+ "\nStyle: " + style + "\nLiked: " + like;
 	}
 }

@@ -1,21 +1,27 @@
-fabric:
-	0-cotton
-	1-polyester
-	2-nylon
+Gender:
+	M - men's
+	W - women's
 	
-color:
-	0-black
-	1-white
-	2-green
+Atmosphere:
+	F - formal
+	I - informal
 	
-length:
-	0-short
-	1-long
+Section: 
+	U - upper (tops)
+	L - lower (bottoms)
 	
-section:
-	0-lower
-	1-upper
+Style:
+	J - jacket
+	T - t-shirt
+	S - sweater
+	P - pants
+	H - shorts
 	
-atmosphere:
-	0-informal
-	1-formal
+Color:
+	B - black
+	E - white
+	R - red
+	G - green
+	C - blue
+	Y - gray
+	
